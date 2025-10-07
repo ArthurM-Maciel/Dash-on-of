@@ -1,4 +1,4 @@
-# AutoHub - Dashboard de Automação Modernizado 🚀
+# AutoHub - Dashboard de Automação  🚀
 
 Um dashboard moderno, interativo e gamificado para gerenciar automações de onboarding e offboarding de funcionários em empresas.
 
