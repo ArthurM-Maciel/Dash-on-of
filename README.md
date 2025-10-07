@@ -1,46 +1,93 @@
-# Getting Started with Create React App
+# AutoHub - Dashboard de Automação Modernizado 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um dashboard moderno, interativo e gamificado para gerenciar automações de onboarding e offboarding de funcionários em empresas.
 
-## Available Scripts
+## ✨ Funcionalidades Principais
 
-In the project directory, you can run:
+### 🔐 Sistema de Autenticação
+- **Dois tipos de usuário**: Administrador e RH
+- **Autenticação diferenciada** com dashboards específicos
+- **Dados persistidos** no localStorage
 
-### `npm start`
+#### Credenciais de Teste:
+- **Admin**: `admin@empresa.com` / senha: `123456`
+  - Usuário: Arthur Maciel (Nível 7, 2847 XP)
+- **RH**: `rh@empresa.com` / senha: `123456`
+  - Usuário: Maria Santos (Nível 3, 1240 XP)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 👤 Dashboard Administrativo (Arthur Maciel)
+- **Métricas em Tempo Real**: Total de solicitações, pendências, taxa de sucesso
+- **Painel de Automações**: Status de sistemas, execuções ativas, logs
+- **Monitoramento de Sistemas**: Office 365, Slack, GitHub, AWS, etc.
+- **Gerenciamento Completo**: Controle total das automações e configurações
+- **Analytics Avançados**: Gráficos de performance e estatísticas detalhadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 👥 Dashboard RH
+- **Interface Simplificada**: Focada em onboarding/offboarding
+- **Formulários Intuitivos**: Criação de novos funcionários e desligamentos
+- **Notificações de Problemas**: Alertas quando automações falham
+- **Acompanhamento de Status**: Visualização do progresso das solicitações
 
-### `npm test`
+### 🎮 Sistema de Gamificação
+- **Níveis e XP**: Progressão baseada em atividades
+- **Badges e Conquistas**: Desbloqueáveis por metas atingidas
+- **Barras de Progresso**: Visualização clara do avanço
+- **Ranking**: Sistema de pontuação entre usuários
+- **Recompensas Visuais**: Animações e feedbacks positivos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔔 Sistema de Notificações Avançado
+- **Central de Notificações**: Painel lateral com todas as notificações
+- **Notificações em Tempo Real**: Atualizações automáticas a cada 30s
+- **Filtros Inteligentes**: Por status, prioridade e tipo
+- **Diferentes Prioridades**: Baixa, média, alta e urgente
+- **Ações Requeridas**: Destacar notificações que precisam de intervenção
 
-### `npm run build`
+## 🚀 Como Executar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Instale as dependências**:
+   \`\`\`bash
+   npm install
+   \`\`\`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Execute o projeto**:
+   \`\`\`bash
+   npm start
+   \`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Acesse no navegador**:
+   \`\`\`
+   http://localhost:3000
+   \`\`\`
 
-### `npm run eject`
+## 🛠 Tecnologias Utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Frontend**: React 18 com TypeScript
+- **Estilização**: Tailwind CSS
+- **Ícones**: Emojis e símbolos Unicode
+- **Contexto**: React Context API para estados globais
+- **Persistência**: localStorage para dados do usuário
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📊 Dados Mockados Robustos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Sistemas Integrados (8 sistemas):
+- Active Directory (98.5% uptime)
+- Office 365 (97.2% uptime)
+- Slack (99.1% uptime)
+- GitHub (99.5% uptime)
+- Jira (95.8% uptime)
+- Confluence (96.7% uptime)
+- AWS Console (94.2% uptime)
+- Figma (98.9% uptime)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Automações Simuladas:
+- **Onboarding Completo**: 15 min, 96.8% taxa de sucesso
+- **Offboarding Seguro**: 10 min, 94.2% taxa de sucesso
+- **Sincronização**: 99.1% taxa de sucesso
 
-## Learn More
+## 👨‍💻 Desenvolvido por
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Arthur Maciel** - Dashboard moderno e gamificado para automação empresarial
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+
+💡 **Nota**: Este é um protótipo avançado com dados mockados preparado para integração com APIs reais.

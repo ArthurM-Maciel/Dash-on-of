@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { NotificationProvider } from "./components/NotificationSystem";
+import Login from "./components/Login";
+import ModernLayout from "./components/ModernLayout";
+import AdminDashboard from "./components/AdminDashboard";
+import HRDashboard from "./components/HRDashboard";
 
-function App() {
+const AppContent: FC = () => {
+  const { user, isLoading } = useAuth();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto"></div>
+          <p className="mt-4 text-gray-600">Carregando...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Login />;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ModernLayout>
+      {user.role === "admin" ? <AdminDashboard /> : <HRDashboard />}
+    </ModernLayout>
   );
-}
+};
+
+const App: FC = () => {
+  return (
+    <AuthProvider>
+      <NotificationProvider>
+        <AppContent />
+      </NotificationProvider>
+    </AuthProvider>
+  );
+};
 
 export default App;
