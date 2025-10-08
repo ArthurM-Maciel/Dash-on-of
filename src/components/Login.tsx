@@ -22,14 +22,14 @@ const Login: FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center p-4">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
-          <div className="mx-auto h-12 w-12 bg-primary-600 rounded-full flex items-center justify-center">
-            <User className="h-6 w-6 text-white" />
+          <div className="mx-auto h-16 w-16 flex items-center justify-center">
+            <img src="/raio-logo.svg" alt="Raiô Logo" className="h-16 w-16" />
           </div>
           <h2 className="mt-6 text-3xl font-bold text-gray-900">
-            Dashboard On/Off Boarding
+            Raiô Dashboard
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Faça login para acessar o sistema
+            Automação de Onboarding e Offboarding
           </p>
         </div>
 

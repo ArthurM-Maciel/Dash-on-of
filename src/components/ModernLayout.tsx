@@ -47,10 +47,19 @@ const ModernLayout: React.FC<LayoutProps> = ({ children }) => {
       >
         {/* Logo/Header */}
         <div className="flex items-center justify-between p-4 border-b border-raiô-400">
-          {isSidebarOpen && (
-            <h2 className="text-xl font-bold text-white">
-              Raiô<span className="text-raiô-100">Hub</span>
-            </h2>
+          {isSidebarOpen ? (
+            <div className="flex items-center space-x-2">
+              <img src="/raio-logo.svg" alt="Raiô Logo" className="w-8 h-8" />
+              <h2 className="text-xl font-bold text-white">
+                Raiô<span className="text-raiô-100">Hub</span>
+              </h2>
+            </div>
+          ) : (
+            <img
+              src="/raio-logo.svg"
+              alt="Raiô Logo"
+              className="w-8 h-8 mx-auto"
+            />
           )}
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}

@@ -41,11 +41,9 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       >
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
           <div className="flex items-center">
-            <div className="h-8 w-8 bg-primary-600 rounded-lg flex items-center justify-center">
-              <Users className="h-5 w-5 text-white" />
-            </div>
+            <img src="/raio-logo.svg" alt="Raiô Logo" className="h-8 w-8" />
             <span className="ml-2 text-lg font-semibold text-gray-900">
-              Dashboard
+              Raiô Dashboard
             </span>
           </div>
           <button
