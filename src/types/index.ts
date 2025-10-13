@@ -6,9 +6,6 @@ export interface User {
   email: string;
   role: UserRole;
   avatar?: string;
-  level?: number;
-  points?: number;
-  badges?: Badge[];
   departament?: string;
 }
 

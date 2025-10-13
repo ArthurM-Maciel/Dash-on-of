@@ -3,84 +3,11 @@ import {
   System,
   DashboardStats,
   Notification,
-  Badge,
-  Achievement,
   AutomationFlow,
   AutomationStatus,
   AnalyticsData,
   ChartData,
 } from "../types";
-
-// Gamification Data
-export const mockBadges: Badge[] = [
-  {
-    id: "1",
-    name: "Primeiro Acesso",
-    description: "Realizou seu primeiro login no sistema",
-    icon: "🎯",
-    color: "blue",
-    unlockedAt: "2024-10-01T09:00:00Z",
-  },
-  {
-    id: "2",
-    name: "Automação Master",
-    description: "Configurou 10 automações com sucesso",
-    icon: "🤖",
-    color: "purple",
-    unlockedAt: "2024-10-03T14:30:00Z",
-  },
-  {
-    id: "3",
-    name: "Velocista",
-    description: "Processou 50 solicitações em um dia",
-    icon: "⚡",
-    color: "yellow",
-  },
-  {
-    id: "4",
-    name: "Guardian",
-    description: "Zero falhas de segurança por 30 dias",
-    icon: "🛡️",
-    color: "green",
-  },
-  {
-    id: "5",
-    name: "Colaborador do Ano",
-    description: "Melhor performance anual",
-    icon: "👑",
-    color: "gold",
-  },
-];
-
-export const mockAchievements: Achievement[] = [
-  {
-    id: "1",
-    title: "Onboarding Expert",
-    description: "Complete 100 processos de onboarding",
-    points: 500,
-    progress: 87,
-    maxProgress: 100,
-    badge: mockBadges[1],
-  },
-  {
-    id: "2",
-    title: "Sistema Ninja",
-    description: "Configure todos os sistemas disponíveis",
-    points: 1000,
-    progress: 6,
-    maxProgress: 10,
-    badge: mockBadges[3],
-  },
-  {
-    id: "3",
-    title: "Automação Suprema",
-    description: "Crie 50 automações eficientes",
-    points: 2000,
-    progress: 23,
-    maxProgress: 50,
-    badge: mockBadges[1],
-  },
-];
 
 // Enhanced Systems Data
 export const mockSystems: System[] = [

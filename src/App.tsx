@@ -20,6 +20,8 @@ const AppContent: FC = () => {
     );
   }
 
+  
+
   if (!user) {
     return <Login />;
   }

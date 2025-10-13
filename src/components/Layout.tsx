@@ -26,6 +26,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     { name: "Configurações", href: "/settings", icon: Settings },
   ];
 
+  
+
   const filteredNavigation =
     user?.role === "hr"
       ? navigation.filter((item) => item.name !== "Gestão de Acessos")

@@ -63,36 +63,22 @@ const AdminDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      {/* Welcome Header com Gamificação */}
+      {/* Welcome Header */}
       <div className="bg-gradient-to-r from-raiô-500 to-raiô-600 rounded-xl p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold">Olá, {user?.name}! 👋</h1>
+            <h1 className="text-3xl font-bold">Olá, {user?.name}!</h1>
             <p className="text-raiô-100 mt-2">
               Bem-vindo ao seu painel administrativo
             </p>
-            <div className="flex items-center space-x-4 mt-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl">⚡</span>
-                <div>
-                  <p className="text-sm font-medium">
-                    Nível {user?.level || 1}
-                  </p>
-                  <p className="text-xs text-raiô-200">
-                    {user?.points || 0} XP
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl">🏆</span>
-                <div>
-                  <p className="text-sm font-medium">
-                    {user?.badges?.length || 0} Badges
-                  </p>
-                  <p className="text-xs text-raiô-200">Conquistadas</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-sm text-raiô-200 mt-2">
+              {new Date().toLocaleDateString("pt-BR", { 
+                weekday: "long", 
+                year: "numeric", 
+                month: "long", 
+                day: "numeric" 
+              })}
+            </p>
           </div>
 
           {/* Toggle Real-time */}

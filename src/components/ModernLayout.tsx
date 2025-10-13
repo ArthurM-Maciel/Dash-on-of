@@ -86,34 +86,13 @@ const ModernLayout: React.FC<LayoutProps> = ({ children }) => {
                         : "bg-raiô-200 text-raiô-800"
                     }`}
                   >
-                    {isAdmin ? "Admin" : "RH"}
+                    {isAdmin ? "Administrador" : "RH"}
                   </span>
-                  {user?.level && (
-                    <span className="px-2 py-1 text-xs bg-white text-raiô-700 rounded-full">
-                      Nível {user.level}
-                    </span>
-                  )}
                 </div>
               </div>
             )}
           </div>
 
-          {/* Points/XP Bar (gamification) */}
-          {isSidebarOpen && user?.points && (
-            <div className="mt-3">
-              <div className="flex justify-between text-xs text-raiô-100 mb-1">
-                <span>XP: {user.points}</span>
-                <span>{user.level ? `Nível ${user.level}` : "Nível 1"}</span>
-              </div>
-              <div className="w-full bg-raiô-300 rounded-full h-2">
-                <div
-                  className={`xp-progress-bar ${
-                    user.points % 1000 > 500 ? "w-1/2" : "w-1/4"
-                  }`}
-                ></div>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Navigation Menu */}

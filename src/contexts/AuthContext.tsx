@@ -6,7 +6,6 @@ import React, {
   ReactNode,
 } from "react";
 import { User } from "../types";
-import { mockBadges } from "../data/mockData";
 
 interface AuthContextType {
   user: User | null;
@@ -26,9 +25,6 @@ const mockUsers: User[] = [
     role: "admin",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=32&h=32&fit=crop&crop=face",
-    level: 7,
-    points: 2847,
-    badges: [mockBadges[0], mockBadges[1]],
     departament: "Tecnologia",
   },
   {
@@ -38,9 +34,6 @@ const mockUsers: User[] = [
     role: "hr",
     avatar:
       "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face",
-    level: 3,
-    points: 1240,
-    badges: [mockBadges[0]],
     departament: "Recursos Humanos",
   },
 ];
@@ -52,11 +45,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Verificar se há usuário salvo no localStorage
-    const savedUser = localStorage.getItem("user");
-    if (savedUser) {
-      setUser(JSON.parse(savedUser));
-    }
+    // Remover auto-login - sempre iniciar na tela de login
     setIsLoading(false);
   }, []);
 

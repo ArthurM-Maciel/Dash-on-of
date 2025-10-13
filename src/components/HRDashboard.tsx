@@ -140,28 +140,14 @@ const HRDashboard: React.FC = () => {
             <p className="text-green-100 mt-2">
               Painel de Recursos Humanos - Gerencie onboarding e offboarding
             </p>
-            <div className="flex items-center space-x-4 mt-4">
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl">🏆</span>
-                <div>
-                  <p className="text-sm font-medium">
-                    Nível {user?.level || 1}
-                  </p>
-                  <p className="text-xs text-green-200">
-                    {user?.points || 0} XP
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl">🎯</span>
-                <div>
-                  <p className="text-sm font-medium">
-                    {user?.badges?.length || 0} Badges
-                  </p>
-                  <p className="text-xs text-green-200">Conquistadas</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-sm text-green-200 mt-2">
+              {new Date().toLocaleDateString("pt-BR", { 
+                weekday: "long", 
+                year: "numeric", 
+                month: "long", 
+                day: "numeric" 
+              })}
+            </p>
           </div>
 
           {/* Quick Actions */}
