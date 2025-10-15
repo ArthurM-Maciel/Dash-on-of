@@ -14,6 +14,28 @@ body {
   color: #111827; /* gray-900 */
 }
 
+/* Melhorias de renderização de fonte para evitar 'letras embaralhadas' */
+html,
+body,
+input,
+button,
+textarea,
+select {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Ajustes para inputs */
+.input {
+  letter-spacing: 0.2px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
 /* Component styles */
 .btn {
   display: inline-flex;

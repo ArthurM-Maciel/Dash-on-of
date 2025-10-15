@@ -41,12 +41,10 @@ const ModernLayout: React.FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen bg-gray-50 flex">
       {/* Sidebar */}
       <div
-        className={`${
-          isSidebarOpen ? "w-64" : "w-16"
-        } bg-gradient-to-b from-raiô-500 to-raiô-600 shadow-lg transition-all duration-300 ease-in-out`}
+        className={`${isSidebarOpen ? "w-64" : "w-16"} bg-white border-r border-gray-200 shadow-sm transition-all duration-300 ease-in-out overflow-hidden`}
       >
         {/* Logo/Header */}
-        <div className="flex items-center justify-between p-4 border-b border-raiô-400">
+  <div className="flex items-center justify-between p-4 border-b border-gray-100">
           {isSidebarOpen ? (
             <div className="flex items-center space-x-2">
               <img src="/raio-logo.svg" alt="Raiô Logo" className="w-8 h-8" />
@@ -63,7 +61,8 @@ const ModernLayout: React.FC<LayoutProps> = ({ children }) => {
           )}
           <button
             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-            className="p-2 rounded-lg hover:bg-raiô-400 transition-colors text-white"
+            className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-600"
+            aria-label="Alternar menu lateral"
           >
             {isSidebarOpen ? "◀" : "▶"}
           </button>
@@ -77,15 +76,9 @@ const ModernLayout: React.FC<LayoutProps> = ({ children }) => {
             </div>
             {isSidebarOpen && (
               <div className="flex-1">
-                <p className="font-semibold text-white">{user?.name}</p>
+                  <p className="font-semibold text-gray-900">{user?.name}</p>
                 <div className="flex items-center space-x-2">
-                  <span
-                    className={`px-2 py-1 text-xs rounded-full ${
-                      isAdmin
-                        ? "bg-white text-raiô-700"
-                        : "bg-raiô-200 text-raiô-800"
-                    }`}
-                  >
+                    <span className={`px-2 py-1 text-xs rounded-full ${isAdmin ? "bg-gray-100 text-gray-800" : "bg-gray-50 text-gray-700"}`}>
                     {isAdmin ? "Administrador" : "RH"}
                   </span>
                 </div>
@@ -100,30 +93,27 @@ const ModernLayout: React.FC<LayoutProps> = ({ children }) => {
           {menuItems.map((item, index) => (
             <button
               key={index}
-              className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 ${
-                item.active
-                  ? "bg-white text-raiô-700 border-l-4 border-white shadow-md"
-                  : "text-raiô-100 hover:bg-raiô-400 hover:text-white"
-              }`}
+              className={
+                isSidebarOpen
+                  ? `w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 ${item.active ? 'bg-gray-100 text-gray-900 border-l-4 border-gray-200 shadow-sm' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`
+                  : `w-full flex items-center justify-center px-2 py-2 rounded-lg transition-all duration-200 text-gray-700 hover:bg-gray-50`
+              }
+              title={item.label}
             >
               <span className="text-lg">{item.icon}</span>
-              {isSidebarOpen && (
-                <span className="font-medium">{item.label}</span>
-              )}
+              {isSidebarOpen && <span className="font-medium">{item.label}</span>}
               {item.label === "Notificações" && unreadCount > 0 && (
-                <span className="ml-auto bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                  {unreadCount}
-                </span>
+                <span className={`${isSidebarOpen ? 'ml-auto' : 'absolute right-3'} bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center`}>{unreadCount}</span>
               )}
             </button>
           ))}
         </nav>
 
         {/* Logout Button */}
-        <div className="absolute bottom-4 left-4 right-4">
+        <div className="absolute bottom-4 inset-x-0 px-4">
           <button
             onClick={logout}
-            className="w-full flex items-center space-x-3 px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+            className={`w-full flex items-center ${isSidebarOpen ? 'space-x-3 px-3' : 'justify-center'} py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors`}
           >
             <span className="text-lg">🚪</span>
             {isSidebarOpen && <span className="font-medium">Sair</span>}
