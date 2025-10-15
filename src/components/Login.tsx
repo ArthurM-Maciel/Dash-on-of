@@ -29,7 +29,7 @@ const Login: FC = () => {
             Raiô Dashboard
           </h2>
           <p className="mt-2 text-sm text-gray-600">
-            Automação de Onboarding e Offboarding
+            Automaçao de Onboarding e Offboarding
           </p>
         </div>
 
@@ -50,10 +50,10 @@ const Login: FC = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="input pl-10"
+                  className="input pl-10 font-sans antialiased tracking-wide"
                   placeholder="seu@email.com"
                 />
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 z-10 pointer-events-none" />
               </div>
             </div>
 
@@ -72,16 +72,16 @@ const Login: FC = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="input pl-10"
+                  className="input pl-10 font-sans antialiased tracking-wide"
                   placeholder="••••••••"
                 />
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400 z-10 pointer-events-none" />
               </div>
             </div>
           </div>
 
           {error && (
-            <div className="flex items-center space-x-2 text-danger-600 text-sm">
+            <div className="flex items-center space-x-2 text-red-600 text-sm">
               <AlertCircle className="h-4 w-4" />
               <span>{error}</span>
             </div>
