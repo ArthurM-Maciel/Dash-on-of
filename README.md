@@ -86,8 +86,7 @@ Um dashboard moderno, interativo e gamificado para gerenciar automações de onb
 
 ## 👨‍💻 Desenvolvido por
 
-**Arthur Maciel** - Dashboard moderno e gamificado para automação empresarial
-
+**Arthur Maciel** - 
 ---
 
 💡 **Nota**: Este é um protótipo avançado com dados mockados preparado para integração com APIs reais.
